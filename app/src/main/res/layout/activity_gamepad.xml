@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout landscape ala gamepad Xbox: stick kiri di atas D-Pad, ABXY di atas stick kanan. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:splitMotionEvents="true">
+
+    <!-- ===== Bahu kiri ===== -->
+    <com.btgamepad.ui.PadButton
+        android:id="@+id/btnLT"
+        android:layout_width="84dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
+        app:accentColor="@color/btn_shoulder"
+        app:buttonIndex="11"
+        app:label="LT"
+        app:round="false" />
+
+    <com.btgamepad.ui.PadButton
+        android:id="@+id/btnLB"
+        android:layout_width="84dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="8dp"
+        app:accentColor="@color/btn_shoulder"
+        app:buttonIndex="4"
+        app:label="LB"
+        app:round="false" />
+
+    <!-- ===== Bahu kanan ===== -->
+    <com.btgamepad.ui.PadButton
+        android:id="@+id/btnRB"
+        android:layout_width="84dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="104dp"
+        app:accentColor="@color/btn_shoulder"
+        app:buttonIndex="5"
+        app:label="RB"
+        app:round="false" />
+
+    <com.btgamepad.ui.PadButton
+        android:id="@+id/btnRT"
+        android:layout_width="84dp"
+        android:layout_height="44dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        app:accentColor="@color/btn_shoulder"
+        app:buttonIndex="12"
+        app:label="RT"
+        app:round="false" />
+
+    <!-- ===== Sisi kiri ===== -->
+    <com.btgamepad.ui.JoystickView
+        android:id="@+id/stickLeft"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp" />
+
+    <com.btgamepad.ui.PadButton
+        android:id="@+id/btnL3"
+        android:layout_width="56dp"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="12dp"
+        app:accentColor="@color/btn_neutral"
+        app:buttonIndex="8"
+        app:label="L3"
+        app:round="false" />
+
+    <com.btgamepad.ui.DPadView
+        android:id="@+id/dpad"
+        android:layout_width="124dp"
+        android:layout_height="124dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="176dp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- ===== Sisi kanan ===== -->
+    <FrameLayout
+        android:id="@+id/faceButtons"
+        android:layout_width="164dp"
+        android:layout_height="164dp"
+        android:layout_gravity="end|center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:splitMotionEvents="true">
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnY"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="top|center_horizontal"
+            app:accentColor="@color/btn_y"
+            app:buttonIndex="3"
+            app:label="Y" />
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnX"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="start|center_vertical"
+            app:accentColor="@color/btn_x"
+            app:buttonIndex="2"
+            app:label="X" />
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnB"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="end|center_vertical"
+            app:accentColor="@color/btn_b"
+            app:buttonIndex="1"
+            app:label="B" />
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnA"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_gravity="bottom|center_horizontal"
+            app:accentColor="@color/btn_a"
+            app:buttonIndex="0"
+            app:label="A" />
+    </FrameLayout>
+
+    <com.btgamepad.ui.JoystickView
+        android:id="@+id/stickRight"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="176dp"
+        android:layout_marginBottom="8dp" />
+
+    <com.btgamepad.ui.PadButton
+        android:id="@+id/btnR3"
+        android:layout_width="56dp"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="12dp"
+        app:accentColor="@color/btn_neutral"
+        app:buttonIndex="9"
+        app:label="R3"
+        app:round="false" />
+
+    <!-- ===== Tengah: Select / Home / Start ===== -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:splitMotionEvents="true">
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnSelect"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            app:accentColor="@color/btn_neutral"
+            app:buttonIndex="6"
+            app:label="SELECT"
+            app:round="false" />
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnHome"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            app:accentColor="@color/btn_neutral"
+            app:buttonIndex="10"
+            app:label="HOME" />
+
+        <com.btgamepad.ui.PadButton
+            android:id="@+id/btnStart"
+            android:layout_width="64dp"
+            android:layout_height="34dp"
+            app:accentColor="@color/btn_neutral"
+            app:buttonIndex="7"
+            app:label="START"
+            app:round="false" />
+    </LinearLayout>
+
+    <!-- ===== Tengah atas: status & pengaturan ===== -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="6dp"
+            android:maxWidth="360dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="Memulai…"
+            android:textColor="#FFFFFFFF"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chipConnect"
+                style="@style/Chip"
+                android:text="Hubungkan" />
+
+            <TextView
+                android:id="@+id/chipVisible"
+                style="@style/Chip"
+                android:text="Mode Pairing" />
+
+            <TextView
+                android:id="@+id/chipTilt"
+                style="@style/Chip"
+                android:text="Tilt: OFF" />
+
+            <TextView
+                android:id="@+id/chipHaptic"
+                style="@style/Chip"
+                android:text="Getar: ON" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

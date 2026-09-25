@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#FF15171C</color>
+    <color name="btn_a">#FF4CD964</color>
+    <color name="btn_b">#FFFF3B30</color>
+    <color name="btn_x">#FF2E9BFF</color>
+    <color name="btn_y">#FFFFCC00</color>
+    <color name="btn_neutral">#FFDDDDDD</color>
+    <color name="btn_shoulder">#FFB0B8C8</color>
+</resources>
